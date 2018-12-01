@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @item.name
+p
+  strong Code:
+  = @item.code
+p
+  strong Category:
+  = @item.category
+p
+  strong Brand:
+  = @item.brand
+p
+  strong Notes:
+  = @item.notes
+p
+  strong Inner comments:
+  = @item.inner_comments
+p
+  strong Status:
+  = @item.status
+
+=> link_to 'Edit', edit_item_path(@item)
+'|
+=< link_to 'Back', items_path
