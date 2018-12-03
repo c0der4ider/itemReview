@@ -5,7 +5,7 @@ class Ability
     user ||= User.new
 
     # Admin has full power
-    if user.has_role? :admin
+    if user.has_role? [:super, :admin]
       can :manage, :all
     else
       cannot :read, [ Reservation, Transaction, Jobtransaction ]
